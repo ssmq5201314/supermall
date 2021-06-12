@@ -1,0 +1,80 @@
+@import './normalize.css';
+
+:root{
+  --color-text:#666;
+  --colorr-high-text:#ff5777;
+  --color-tine:#ff8198;
+  --color-background:#fff;
+  --line-height:1.5;
+  --font-size:14px
+}
+
+li {
+  list-style:none;
+}
+
+/* ie bug：th 不继承 text-align */
+th {
+  text-align:inherit;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display:block;
+}
+
+/* 去除默认边框 */
+fieldset,img {
+  border:none;
+}
+img{
+  vertical-align: top
+}
+inut{
+  outline: none;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Helvetica Neue', Helvetica, 'Pingfang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-background);
+  color:var(--color-text)
+}
+
+a{
+  color:var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after{
+clear: both;
+content: "";
+display: block;
+width:0;
+height: 0;
+visibility: hidden;
+}
+.clear-fix{
+  zoom: 1;
+}
+
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
